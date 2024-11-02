@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Marca</th>
+      <th>Línea</th>
+      <th>Modelo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vehiculo of vehiculos">
+      <td class="fw-bold">{{ vehiculo.id }}</td>
+      <td>{{ vehiculo.marca }}</td>
+      <td>{{ vehiculo.linea }}</td>
+      <td>{{ vehiculo.modelo }}</td>
+    </tr>
+  </tbody>
+</table>
+<div *ngFor="let marca of marcaCounts | keyvalue">
+  {{ marca.key }}: {{ marca.value }} vehículos
+</div>
